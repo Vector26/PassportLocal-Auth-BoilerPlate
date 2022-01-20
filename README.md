@@ -1,18 +1,20 @@
-## How to use this Repo
+# PassportLocal Auth BoilerPlate
 
-This repo has three branches:
+This is a boilerplate code for implementing Passport-Local Strategy using PassportJS
 
-* master
-* final
-* final-all-in-one
-
-The `master` branch has a starter template for creating what is in the `final` branch.  The `final-all-in-one` is a single `app-all.js` file that functions completely alone, while the `final` branch is a refactored version of that.
-
-## How to run the app
-
-When you go to each branch, the `README.md` will show you how to start the app.
-
-The `master` branch is incomplete and you can follow the written or video tutorials to complete:
-
-* Written - https://zachgoll.github.io/blog/2019/choosing-authentication-strategy/
-* Video - Coming soon
+The user model is : 
+```json
+user={
+  username:string,
+  hash:string,
+  salt:string
+  }
+```
+It is easy to change various defaults such as customFields Object
+```json
+{
+  usernameField:....,
+  passwordField:....
+}
+```
+The main logic is verifyCallback() function, which checks as per your model requirement and is used as a view in POST /login route.
